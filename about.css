@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(classroom.jpg);
+    
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    position: fixed;
+    width: 97%;
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #001;
+}
+
+.logo{
+    width: 60px;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin:0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1{
+    font-size: 55px;
+    margin-top: -20px  ;
+}
+
+
+
+.content p{
+    margin: 20px;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.materi {
+    width: 100%;
+    height: 290vh;
+    background-color:#131313;
+    background-size: cover;
+    background-position: center;
+}
+.content-materi{
+    
+    color: #fff;
+}
+
+
+.content-materi article {
+    max-width: 800px; /* Mengontrol lebar artikel */
+    margin: auto; /* Menyentratkan artikel */
+    padding: 20px; /* Memberikan padding pada artikel */
+    font-family: 'Arial', sans-serif; /* Menggunakan font Arial */
+    line-height: 1.6; /* Meningkatkan keterbacaan dengan line height yang lebih besar */
+    /* background-color: #f8f8f8; Warna latar belakang yang lembut */
+    /* color: #333; Warna teks gelap untuk kontras yang baik */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Memberikan bayangan ringan untuk efek melayang */
+}
+.content-materi h2 {
+    color: #eae7e7; /* Warna teks untuk heading */
+    margin-bottom: 20px; /* Jarak antara heading dan paragraf */
+}
+.content-materi p {
+    margin-bottom: 10px; /* Jarak antar paragraf */
+}
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Menjaga space antara teks dan gambar */
+    background-image: linear-gradient(to right, #333333, #191970, #483D8B);
+    color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.content-section img {
+    width: 350px; /* Ukuran gambar diperbesar */
+    height: 350px; /* Ukuran gambar diperbesar */
+    border-radius: 8px;
+    order: 2; /* Memastikan gambar selalu di sisi kanan */
+}
+
+.content-section div {
+    flex-grow: 1;
+    padding-right: 20px; /* Jarak tambahan antara teks dan gambar */
+}
+.content-guru {
+    width: 100%;
+    height: 590vh;
+    background-color: #000;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.content-guru article{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-image: linear-gradient(to right, #1c1a39, #171742, #0f0647);
+    color: #fff;
+    border-radius: 12px;
+}
+.content-guru ol {
+    counter-reset: item; /* Atur ulang counter item untuk list */
+    padding-left: 20px;
+}
+.content-guru li  {
+    counter-increment: item; /* Naikkan counter item setiap item list baru */
+    margin-bottom: 10px;
+    background-image: linear-gradient(to right, #44023b73, #0f0f5386, #1049867f, #0eb3ae79);
+    padding: 10px;
+    border-left: 3px solid #3366cc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+.content-guru p  {
+    counter-increment: item; /* Naikkan counter item setiap item list baru */
+    margin-bottom: 10px;
+    background-image: linear-gradient(to right, #44023b73, #0f0f5386, #1049867f, #0eb3ae79);
+    padding: 10px;
+    border-left: 3px solid #3366cc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+.content-guru li::before {
+     /* Tambahkan nomor urut di depan item */
+    font-weight: bold;
+}
+
+.content-guru h1 , h3 {
+    justify-content: center;
+    text-align: center;
+}
+.content-pp {
+    width: 100%;
+    height: 2020vh;
+    background-color: #001;
+    background-position: center;
+    background-size: cover;
+
+}
+.content-pp article{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-image: linear-gradient(to right, 
+    rgba(1, 1, 1, 1),           /* Hitam murni */
+    rgba(3, 66, 65, 0.98),      /* Hijau gelap sangat lembut */
+    rgba(1, 24, 29, 0.95),      /* Hijau gelap lebih lembut lagi */
+    rgba(2, 33, 32, 0.9)        /* Hijau kehitaman dengan transparansi lebih */
+);
+    color: #fff;
+    border-radius: 12px;
+}
+.content-pp ol {
+    counter-reset: item; /* Atur ulang counter item untuk list */
+    padding-left: 20px;
+}
+.content-pp li  {
+    counter-increment: item; /* Naikkan counter item setiap item list baru */
+    margin-bottom: 10px;
+    background-image: linear-gradient(to right, 
+    rgba(2, 1, 2, 1),           /* Hitam murni */
+    rgba(15, 45, 45, 0.85),     /* Hijau gelap dengan transparansi sedang */
+    rgba(25, 60, 60, 0.75),     /* Hijau lebih terang dengan transparansi sedang */
+    rgba(15, 45, 45, 0.85),     /* Kembali ke hijau gelap dengan transparansi sedang */
+    rgba(1, 3, 2, 1)            /* Kembali ke hitam murni */
+);
+    padding: 10px;
+    border-left: 3px solid #3366cc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+.content-pp p  {
+    counter-increment: item; /* Naikkan counter item setiap item list baru */
+    margin-bottom: 10px;
+    background-image: linear-gradient(to right, 
+    rgba(2, 1, 2, 1),           /* Hitam murni */
+    rgba(15, 45, 45, 0.85),     /* Hijau gelap dengan transparansi sedang */
+    rgba(25, 60, 60, 0.75),     /* Hijau lebih terang dengan transparansi sedang */
+    rgba(15, 45, 45, 0.85),     /* Kembali ke hijau gelap dengan transparansi sedang */
+    rgba(1, 3, 2, 1)            /* Kembali ke hitam murni */
+);
+    border-left: 3px solid #3366cc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+.content-pp li::before {
+     /* Tambahkan nomor urut di depan item */
+    font-weight: bold;
+}
+
+.content-pp h1 ,h2, h3 {
+    justify-content: center;
+    text-align: center;
+}
+
+hr {
+    width: 75%;
+    border: none;
+    height: 0.5px;
+    background-color: #f9f6f6; /* Warna garis */
+    margin: 10px auto; /* Jarak atas bawah */
+    box-shadow: #000;
+    
+}
+.kode-etik header {
+    /* background-color: #0056b3; */
+    color:lab(from color l a b);
+    text-align: center;
+    padding: 1em 0;
+    /* background: linear-gradient(to right, white, #777); Gradiasi dari putih ke abu-abu gelap */
+    
+}
+
+.kode-etik main {
+    margin: 10px;
+    padding: 20px;
+}
+
+.kode-etik section {
+    background-color: linear-gradient(to right, #013220, #0a192f);;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.kode-etik h1 {
+    background: linear-gradient(to right,#0073e6, #00b359, #0073e6); /* Gradiasi dari hijau sedang ke biru sedang */
+    -webkit-background-clip: text;
+    background-clip: text; /* Memberi dukungan cross-browser */
+    -webkit-text-fill-color: transparent; /* Membuat teks transparan sehingga gradiasi terlihat */
+    text-fill-color: transparent; /* Dukungan eksperimental, utamakan penggunaan prefix -webkit- */
+    display: inline-block; /* Memastikan gradiasi hanya diterapkan pada teks */
+    color: transparent; /* Fallback untuk browser yang tidak mendukung background-clip */
+}
+
+
+.kode-etik h2 {
+    font-weight: bold; /* Memberikan tebal pada teks */
+    background: linear-gradient(to right, #00b359, #0073e6); /* Gradiasi dari hijau sedang ke biru sedang */
+    -webkit-background-clip: text;
+    background-clip: text; /* Memberi dukungan cross-browser */
+    -webkit-text-fill-color: transparent; /* Membuat teks transparan sehingga gradiasi terlihat */
+    text-fill-color: transparent; /* Dukungan eksperimental, utamakan penggunaan prefix -webkit- */
+    display: inline-block; /* Memastikan gradiasi hanya diterapkan pada teks */
+    color: transparent; /* Fallback untuk browser yang tidak mendukung background-clip */
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    background: linear-gradient(to right, #130413, #05132d,#120212); /* Gradiasi dari hijau tua ke biru tua */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(235, 230, 230, 0.279);
+    margin: 20px auto; /* Tambahkan margin untuk pusat kontainer */
+}
+
+
+.text-content  {
+    flex: 3;
+    margin-right: 20px;
+}
+
+.image-box {
+    display: flex;
+    align-items: center;
+    flex: 2;
+    height: 520px;
+    background: url('Manajemen.jpeg') no-repeat center center/cover;
+}
+
+.text-content h1,  {
+    font-weight: bold; /* Memberikan tebal pada teks */
+    background: linear-gradient(to right, #00b359, #0073e6,#00b359); /* Gradiasi dari hijau sedang ke biru sedang */
+    -webkit-background-clip: text;
+    background-clip: text; /* Memberi dukungan cross-browser */
+    -webkit-text-fill-color: transparent; /* Membuat teks transparan sehingga gradiasi terlihat */
+    text-fill-color: transparent; /* Dukungan eksperimental, utamakan penggunaan prefix -webkit- */
+    display: inline-block; /* Memastikan gradiasi hanya diterapkan pada teks */
+    color: transparent; /* Fallback untuk browser yang tidak mendukung background-clip */
+
+}
+
+.text-content ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+.text-content li {
+    padding: 5px 0;
+}
+
+.mp{
+    list-style-type: none;
+    padding: 0;
+    width: 165%;
+}
+
+.content-standar {
+    width: 100%;
+    height: 200vh;
+    background-color: #010101;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.container h1{
+    font-weight: bold; /* Memberikan tebal pada teks */
+    background: linear-gradient(to right, #00b359, #0073e6,#00b359); /* Gradiasi dari hijau sedang ke biru sedang */
+    -webkit-background-clip: text;
+    background-clip: text; /* Memberi dukungan cross-browser */
+    -webkit-text-fill-color: transparent; /* Membuat teks transparan sehingga gradiasi terlihat */
+    text-fill-color: transparent; /* Dukungan eksperimental, utamakan penggunaan prefix -webkit- */
+    display: inline-block; /* Memastikan gradiasi hanya diterapkan pada teks */
+    color: transparent; /* Fallback untuk browser yang tidak mendukung background-clip */
+
+}
+
+.h1 {
+    font-weight: bold; /* Memberikan tebal pada teks */
+    background: linear-gradient(to right, #00b359, #0073e6,#00b359); /* Gradiasi dari hijau sedang ke biru sedang */
+    -webkit-background-clip: text;
+    background-clip: text; /* Memberi dukungan cross-browser */
+    -webkit-text-fill-color: transparent; /* Membuat teks transparan sehingga gradiasi terlihat */
+    text-fill-color: transparent; /* Dukungan eksperimental, utamakan penggunaan prefix -webkit- */
+    display: flex; /* Memastikan gradiasi hanya diterapkan pada teks */
+    color: transparent; /* Fallback untuk browser yang tidak mendukung background-clip */
+
+}
+
+
+.ok h1 {
+    text-align: center;
+    color: #333;
+}
+
+.references {
+    list-style-type: none; /* Menghilangkan bullet points */
+    padding: 0;
+    margin: 0;
+    width: 80%;
+    margin: auto; /* Centering the list */
+}
+
+.references li {
+    background-color: #07395ce1;
+    padding: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adding a subtle shadow */
+    border-left: 5px solid #0056b3; /* A blue vertical line for stylistic accent */
+}
+
+.references li em {
+    font-style: italic; /* Italicize book and article titles */
+}
+
+.references li strong {
+    font-weight: bold; /* Bold for journal names */
+}
+
+.book-details {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.book-details a {
+    color: #0077cc;
+    text-decoration: none;
+}
+.book-details a:hover {
+    text-decoration: underline;
+}
